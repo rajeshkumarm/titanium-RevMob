@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2012 by Your Company
+
+
+# these should not be edited
+name: prorevmob
+moduleid: com.prolific.revmob
+guid: 3bc690fb-b12f-47f6-990a-5fe19bba16d2
+platform: android
+minsdk: 2.0.2.GA
