@@ -16,6 +16,8 @@ import org.appcelerator.titanium.proxy.TiViewProxy;
 import org.appcelerator.kroll.common.Log;
 import org.appcelerator.kroll.common.TiConfig;
 
+import com.revmob.RevMobAds;
+
 
 @Kroll.module(name="Prorevmob", id="com.prolific.revmob")
 public class ProrevmobModule extends KrollModule
@@ -39,6 +41,24 @@ public class ProrevmobModule extends KrollModule
 		Log.d(LCAT, "inside onAppCreate");
 		// put module init code that needs to run when the application is created
 	}
-
+	
+	@Kroll.method
+	public void showFullScreenAd(String appId)
+	{
+		RevMobAds.showFullscreenAd(TiApplication.getAppCurrentActivity(), appId);
+	}
+	
+	@Kroll.method
+	public void showPopupAd(String appId)
+	{
+		RevMobAds.showPopup(TiApplication.getAppCurrentActivity(), appId);
+	}
+	
+	@Kroll.method
+	public void openAdLink(String appId)
+	{
+		RevMobAds.openAdLink(TiApplication.getAppCurrentActivity(), appId);
+	}
+	
 }
 
